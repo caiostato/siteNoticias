@@ -1,0 +1,28 @@
+.noticias {
+    height: calc(40vh - 60px);
+    margin-left: 20%;
+}
+
+.container {
+    display: grid;
+    width: 70%;
+    margin-top: 2px;
+    border: 1px solid lightgrey;
+}
+
+.noticias__principal {
+    margin: 5% 30%;
+}
+.noticias__principal h1 {
+    margin-bottom: 10%;
+}
+.noticias__principal img {
+    width: 140%;
+    margin-left: -10%;
+}
+.noticias__principal p {
+    margin-left: 5%;
+    font-size: 22px;
+    margin-right: -25%;
+    line-height: 1.30;
+}
