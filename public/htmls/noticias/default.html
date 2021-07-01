@@ -2,37 +2,155 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Default</title>
 
-    <title>Default Noticias</title>
-    <link href="/styles/style.css" rel="stylesheet">
-    <link href="/styles/normalize.css" rel="stylesheet">
-    <link href="/styles/defaults/menu.css" rel="stylesheet">
-    <link href="/styles/defaults/default.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/remake/images/icon1.ico" type="image/x-icon">
+
+    <link href="/remake/styles/menu.css" rel="stylesheet">
+    <link href="/remake/styles/normalize.css" rel="stylesheet">
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+    <script src="/remake/scripts/env.js"></script>
+    <script src="/remake/scripts/app.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .conteudo {
+            height: calc(50vh - 60px);
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        .container {
+            width: 100%;
+            margin-top: 2px;
+            margin-bottom: 10px;
+            border: 2px solid lightgrey;  
+        }
+        .noticias {
+            width: 100%;
+            display: grid;
+            justify-content: center;
+        }
+
+        .noticiaPrincipal_titulo {
+            background: rgba(0,0,0,.5);
+            color: aliceblue;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .caixa{
+            justify-content: center;
+        }
+
+
+        .noticiaPrincipal_p {
+            justify-self: center;
+            width: 57%;
+            font-size: 17pt;
+            margin-top: 5%;
+        }
+
+        .noticiaPrincipal {
+            margin-top: 5%;
+            background: url("/remake/images/imgTeste.png")  center / cover no-repeat;
+            width: 700px;
+            height: 700px;
+            justify-self: center;
+            text-align: justify;
+        }
+
+        .menu img {
+            width: 13.6%;
+        }
+
+        button {
+            width: 12%;
+            height: 10%;
+            padding: .1rem;
+
+            border: none;
+            background: none;
+            cursor:pointer;
+
+        }
+
+        /* CORACAO */
+        .heart {
+            background-color: red;
+            display: inline-block;
+            height: 30px;
+            margin: 0 10px;
+            position: relative;
+            top: 0;
+            transform: rotate(-45deg);
+            width: 30px;
+        }
+        .heart:before,
+        .heart:after {
+            content: "";
+            background-color: red;
+            border-radius: 50%;
+            height: 30px;
+            position: absolute;
+            width: 30px;
+        }
+        .heart:before {
+            top: -15px;
+            left: 0;
+        }
+        .heart:after {
+            left: 15px;
+            top: 0;
+        }
+
+
+    </style>
+
 </head>
 <body class="app">
-    <header class="header">
-        <div class="menu">
-            <a class="homeIcon" href="/index.html"> <img src="/images/homeIcon.png" alt="temp"></a>
-            <img src="/images/icon1.png" alt="temp">
-        </div>
-    </header>
 
-    <main class="conteudo">
+<header class="header">
+    <nav class="menu">
+        <ul>
+            <li> <img class="iconMenu" src="/remake/images/icon1.png" alt="temp"> </li>
+
+            <li class="space">space</li>
+            <li class="space">space</li>
+            
+            
+            <li> <a class="homeIcon" href="/remake/index.html"> <img src="/remake/images/homeIcon.png" alt="homePageIcon"></a> </li>
+            <li> <a class="loginButton" href=""><img src="/remake/images/login.png" alt="imgEducacao">   Login</a></li>
+            
+        </ul>    
+    </nav>
+
+</header>
+
+<main class="conteudo">
+
+    <div class="container">
+
         <section class="noticias">
-            <div class="container">
-                <div class="noticias__principal">
-                    <h1>aaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
-                    <img src="/images/imgTeste.png" alt="temp">
-                    <p>
-                        Afastamento foi confirmado pela prefeitura e deve durar 30 dias. Segundo o medico David Uip, Covas sera internado ainda hoje.
-                    </p>
+            <!-- ICON -->
+                <div id="idNot" class="noticiaPrincipal">
+                    <h2 id="idNotTitle" class="noticiaPrincipal_titulo">Estudo com vacina AstraZeneca em Botucatu indica queda de 71% de casos de Covid após vacinação em massa</h2>
+                    <button onclick="like()"> <div class="heart"></div></button>     
                 </div>
-                    
-            </div>
+                
+                <p id="noticiaPrincipal_p" class="noticiaPrincipal_p">
+
+                </p>
 
         </section>
+    </div>
 
-    </main>
+</main>
 
 </body>
 </html>

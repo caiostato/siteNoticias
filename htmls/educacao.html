@@ -5,62 +5,98 @@
 
     <title>Politica</title>
 
+    <link rel="shortcut icon" href="/siteNoticias/images/icon1.ico" type="image/x-icon">
+
+    <link href="/siteNoticias/styles/menu.css" rel="stylesheet">
+    <link href="/siteNoticias/styles/normalize.css" rel="stylesheet">
+    <link href="/siteNoticias/styles/noticiasPages/noticiasSaude.css" rel="stylesheet">
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+    <script src="/siteNoticias/scripts/env.js"></script>
+    <script src="/siteNoticias/scripts/app.js"></script>
+
+
     <style>
         * {
             margin: 0;
             padding: 0;
         }
+        .menu img {
+            width: 13.6%;
+        }
+        .iconMenu {
+            margin-left: -100%;
+        }
     </style>
-    
-    <link rel="shortcut icon" href="./images/icon1.ico" type="image/x-icon">
-
-    <link href="/styles/style.css" rel="stylesheet">
-    <link href="/styles/normalize.css" rel="stylesheet">
-    <link href="/styles/defaults/menu.css" rel="stylesheet">
-    <link href="/styles/defaults/noticias.css" rel="stylesheet">
 
 
 </head>
-<body class="app">
-    <header class="header">
-        <div class="menu">
-            <a class="homeIcon" href="/index.html"> <img src="/images/homeIcon.png" alt="temp"></a>
-            <img src="/images/icon1.png" alt="temp">
-        </div>
+<body>
 
-    </header>
+<header class="header">
+    <nav class="menu">
+        <ul>
+            <li> <img class="iconMenu" src="/siteNoticias/images/icon1.png" alt="temp"> </li>
 
-    <main class="conteudo">
-        <section class="noticias">
+            <li class="space">space</li>
+            <li class="space">space</li>
             
-            <div class="container">
-                <div class="Icon">
-                    <img src="/images/eduIcon.png" alt="temp">
-                    <h1>Educação</h1>
-                </div>
+            
+            <li> <a class="homeIcon" href="/siteNoticias/index.html"> <img src="/siteNoticias/images/homeIcon.png" alt="homePageIcon"></a> </li>
+            <li> <a class="loginButton" href=""><img src="/siteNoticias/images/login.png" alt="imgEducacao">   Login</a></li>
+            
+        </ul>    
+    </nav>
 
-                <div class=noticias__principal>
-                    <h1>aaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
-                    <img src="/images/imgTeste.png" alt="temp">
-                    
-                    <hr>
-
-                    <h1>aaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
-                    <img src="/images/imgTeste.png" alt="temp">
-                    
-                    <hr>
-
-                    <h1>aaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
-                    <img src="/images/imgTeste.png" alt="temp">
-                </div>
+</header>
 
 
+    
+<main class="conteudo">
 
+    <div class="container">
+        <section class="noticias">
+
+            <!-- ICON -->
+            <div class="Icon">
+                <ul>
+                    <li> <img src="/siteNoticias/images/eduIcon.png" alt="temp"> </li>
+                    <li> <h1>Educacao</h1> </li>
+                </ul>
             </div>
             
-        </section>
+            <!-- NOTICIAS -->
+            <a href="">
+                <div id="idNot1" class="noticiaPrincipal">
+                    <h2 id="idNotTitle1" class="noticiaPrincipal_titulo caixa">default</h2>
+                    <button onclick="like()"> <div class="heart"></div></button>                
+                </div>
+            </a>
 
-    </main>
+
+            <a href="">
+                <div id="idNot2" class="noticiaPrincipal">   
+                    <h2 id="idNotTitle2" class="noticiaPrincipal_titulo caixa">default</h2>                   
+                    <button onclick="like()"> <div class="heart"></div></button>                    
+                </div>
+
+            </a>
+
+            <a href="">
+                <div id="idNot3" class="noticiaPrincipal">
+                    <h2 id="idNotTitle3" class="noticiaPrincipal_titulo caixa">default</h2>
+                    <button onclick="like()"> <div class="heart"></div></button>
+                </div>
+            </a>
+
+
+        
+        </section>
+    </div>
+
+</main>
     
 </body>
 </html>

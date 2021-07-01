@@ -14,6 +14,26 @@
     display: grid;
     justify-content: center;
 }
+
+/* icon */
+
+ul { 
+    list-style: none;
+    justify-items: center;
+}
+ul li {
+    align-content: center;
+    text-align: center;
+}
+.Icon img {
+    width: 17%;
+    margin-top: 5%;
+}
+.Icon h1 {
+    font-size: 30pt;
+}
+
+
 .noticiaPrincipal_titulo {
     background: rgba(0,0,0,.5);
     color: aliceblue;
@@ -34,42 +54,21 @@
 
 .noticiaPrincipal {
     margin-top: 5%;
-    background: url("/remake/images/imgTeste.png")  center / cover no-repeat;
+    background: url("/siteNoticias/images/imgTeste.png")  center / cover no-repeat;
     width: 700px;
     height: 700px;
     justify-self: center;
 }
 .noticiaPrincipal:nth-child(2) {
     margin-top: 5%;
-    background: url("/remake/images/imgTeste.png")  center / cover no-repeat;
+    background: url("/siteNoticias/images/imgTeste.png")  center / cover no-repeat;
     width: 700px;
     height: 700px;
     justify-self: center;
 }
 .noticiaPrincipal:nth-child(3) {
     margin-top: 5%;
-    background: url("/remake/images/imgTeste.png")  center / cover no-repeat;
-    width: 700px;
-    height: 700px;
-    justify-self: center;
-}
-.noticiaPrincipal:nth-child(4) {
-    margin-top: 5%;
-    background: url("/remake/images/imgTeste.png")  center / cover no-repeat;
-    width: 700px;
-    height: 700px;
-    justify-self: center;
-}
-.noticiaPrincipal:nth-child(5) {
-    margin-top: 5%;
-    background: url("/remake/images/imgTeste.png")  center / cover no-repeat;
-    width: 700px;
-    height: 700px;
-    justify-self: center;
-}
-.noticiaPrincipal:nth-child(6) {
-    margin-top: 5%;
-    background: url("/remake/images/imgTeste.png")  center / cover no-repeat;
+    background: url("/siteNoticias/images/imgTeste.png")  center / cover no-repeat;
     width: 700px;
     height: 700px;
     justify-self: center;

@@ -6,20 +6,26 @@
     font-size: 20px;
 }
 .menu ul {
+    margin-block-start: 0;
     list-style: none; 
-    margin-left: 2%;
     display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-inline-start: 0px;
 }
 .menu ul li {
-    width: 11.7%;
+    width: 13.2%;
     float: left;
+    align-items:center;
+    text-align: center;
 }
 .menu a{
     padding: .8rem;
-    display:inline-block;
+    display:flex;
     text-decoration: none;
     align-items:center;
     text-align: center;
+    justify-content: center;
 
     background-color: #1e90ff;
     color: aliceblue;
@@ -30,16 +36,9 @@
     color: black;
 }
 .menu img {
-    width: 14.5555%;
-}
-.space {
-    color: #1e90ff;
-    cursor: default;
+    width: 13.4%;
 }
 .iconMenu{
-    margin-top: 4%;
+    justify-self: flex-start;
 }
-/* 
-.loginButton {
-    
-}  */
+
