@@ -20,7 +20,7 @@ function authenticateUser(event){
 }
 
 function registerPage() {
-    window.open("/remake/htmls/register.html");
+    window.open("/siteNoticias/htmls/register.html");
 }
 
 function createUser(event){

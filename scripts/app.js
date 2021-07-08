@@ -1,4 +1,3 @@
-
 function load(event) {
     event.preventDefault();
 
@@ -34,6 +33,53 @@ function load(event) {
         console.log(error);
     })
 }
+
+
+$(document).ready(function(){
+    console.log("Biblioteca JQuery importada.");
+
+    let icon = document.querySelector('#icon'); //icon
+    $('#a0').mouseenter(() => {
+        icon.src = "./images/icon1.png"
+    })
+    $('#a0').mouseleave(() => {
+        icon.src = "./images/icon1White.png"
+    })
+
+    let img1 = document.querySelector('#img1'); //politica
+    $('#a1').mouseenter(() => {
+        img1.src = "./images/politicaIcon.png"
+    })
+    $('#a1').mouseleave(() => {
+        img1.src = "./images/politicaIconWhite.png"
+    })
+
+    let img2 = document.querySelector('#img2'); //saude
+    $('#a2').mouseenter(() => {
+        img2.src = "./images/saudeIcon.png"
+    })
+    $('#a2').mouseleave(() => {
+        img2.src = "./images/saudeIconWhite.png"
+    })
+
+    let img3 = document.querySelector('#img3'); //educacao
+    $('#a3').mouseenter(() => {
+        img3.src = "./images/eduIcon.png"
+    })
+    $('#a3').mouseleave(() => {
+        img3.src = "./images/eduIconWhite.png"
+    })
+    
+    let img4 = document.querySelector('#img4'); // login
+    $('#a4').mouseenter(() => {
+        img4.src = "./images/login.png"
+    })
+    $('#a4').mouseleave(() => {
+        img4.src = "./images/loginWhite.png"
+    })
+    
+
+})
 
 // Curtir noticias 
 function like() {

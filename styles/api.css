@@ -1,0 +1,31 @@
+.aside {
+    margin-top: 60px;
+    width: 20%;
+    justify-content: center;
+    margin-right: 80%;
+    position: fixed;
+    display: flex;
+}
+
+.box {
+    height: 50vh;
+    margin-top: 10%;
+    border: 1px lightgray solid;
+    width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #C7C6C1;
+    border-radius: 5px;
+    font-size: 10pt;
+}
+.box img {
+    width: 10%;
+    text-align: center;
+}
+.coin {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.coin p {
+    color: steelblue;
+}
