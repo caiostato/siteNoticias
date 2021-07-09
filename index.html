@@ -6,46 +6,107 @@
     <title>Caio & Fabio Noticias</title>
 
     <link href="./styles/style.css" rel="stylesheet">
-    <link href="./styles/noticias.css" rel="stylesheet">
-    <link href="./styles/menu.css" rel="stylesheet">
+    <!-- <link href="./styles/menu.css" rel="stylesheet"> -->
+    <link href="./styles/menuTest.css" rel="stylesheet">
     <link href="./styles/api.css" rel="stylesheet">
+    <link href="./styles/noticias.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans+SC">
 
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
     
     <script src="scripts/env.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/api.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Encode Sans SC' rel='stylesheet'>
+    <style>
+    .menu {
+        font-family: 'Encode Sans SC';font-size: 18px;
+    }
+    </style>
 </head>
 <body onload="load(event), apiEvent(event)">
 
-<header class="header">
+<!--------------------Menu-------------------->
+<aside>
     <div class="menu">
-
-        
-        <ul>          
-            <li> <a id="a0"><img id="icon" class="icon" src="./images/icon1White.png" alt="temp"></a></li>
-            <li> <a id="a1" href="/siteNoticias/htmls/politica.html"><img id="img1" src="./images/politicaIconWhite.png" alt="imgPolitica"></a></li>
-            <li> <a id="a2" href="/siteNoticias/htmls/saude.html"><img id="img2" src="./images/saudeIconWhite.png" alt="imgSaude"></a></li>
-            <li> <a id="a3" href="/siteNoticias/htmls/educacao.html"><img id="img3" src="./images/eduIconWhite.png" alt="imgEducacao"></a></li>
-            <li> <a id="a4" class="loginButton" href="/siteNoticias/htmls/login.html"><img id="img4" src="./images/loginWhite.png" alt="imgEducacao"></a></li>
-        </ul>    
-        
+        <img src="/siteNoticias/images/icon1White.png">
+        <div class="menu-item">
+            <ul class="nav">
+                <li>
+                    <a href="/siteNoticias/htmls/educacao.html">
+                        <box-icon name='school' type='solid' color='#ffffff' ></box-icon>
+                        Educacao
+                    </a>
+                    
+                </li>
+                <hr>
+                <li>
+                    <a href="/siteNoticias/htmls/politica.html">
+                        <box-icon name='briefcase' color='#ffffff' ></box-icon>
+                        Politica
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="/siteNoticias/htmls/saude.html">
+                        <box-icon name='health' color='#ffffff' ></box-icon>
+                        Saude
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="/siteNoticias/htmls/login.html">
+                        <box-icon name='exit' color='#ffffff'></box-icon></box-icon>
+                        Login
+                    </a>
+                </li>
+                <hr>
+            </ul>
+        </div>
     </div>
-</header>
+</aside>
 
+
+<!--------------------Cotacoes-------------------->
 <div class="aside">
     <div class="box">
         <div class="coin">
-            <p id="dolar"> <img src="/siteNoticias/images/api/dolar.png"> DOLAR   </p><br>
-            <p id="euro"> <img src="/siteNoticias/images/api/euro.png"> EURO   </p><br>
-            <p id="btc"> <img src="/siteNoticias/images/api/btc.png"> BITCOIN   </p>
+
+            <div class="row">
+                <div class="col-md-2"><box-icon name='coin'></box-icon> <br></div>
+                <div class="col-md-4 coin-name"><strong>Cambio</strong></div>
+                <div class="col-md-2">BRL</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2"><box-icon name='dollar'></box-icon> <br></div>
+                <div class="col-md-3 coin-name"><strong>Dolar</strong></div>
+                <div class="col-md-2" id="dolar"></div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-2"><box-icon name='euro'></box-icon> <br></div>
+                <div class="col-md-3 coin-name"><strong>Euro</strong></div>
+                <div class="col-md-2" id="euro"></div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-2"><box-icon  name='bitcoin'></box-icon> <br></div>
+                <div class="col-md-3 coin-name"><strong>Bitcoin</strong></div>
+                <div class="col-md-2" id="btc"></div>
+
+            </div>
         </div>
     </div>
 </div>
 
+<!--------------------Noticias-------------------->
 <main class="conteudo">
     <div class="container">
         <section class="noticias">

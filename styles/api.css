@@ -2,8 +2,8 @@
     margin-top: 60px;
     width: 20%;
     justify-content: center;
-    margin-right: 80%;
-    position: fixed;
+    margin-left: 68%;
+    position: absolute;
     display: flex;
 }
 
@@ -14,7 +14,7 @@
     width: 100%;
     margin-left: 10%;
     margin-right: 10%;
-    background-color: #C7C6C1;
+    background-color: rgb(238, 238, 238);
     border-radius: 5px;
     font-size: 10pt;
 }
@@ -24,8 +24,24 @@
 }
 .coin {
     margin-top: 10px;
-    margin-left: 10px;
+    justify-self: center;
 }
 .coin p {
     color: steelblue;
+}
+.coin .coin-name {
+    color:royalblue;
+    font-family: 'Encode Sans SC',sans-serif;
+}
+.coin .row {
+    padding: 4px;
+    background-color: #fff;
+    width: 90%;
+    margin: 10px;
+    margin-left: 20px;
+    border-radius: 5px;
+    box-shadow: 4px 2px;
+}
+.coin .row:hover{
+    box-shadow: 0 0 15px 0px rgba(0,0,0,0.8);
 }

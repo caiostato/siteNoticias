@@ -1,0 +1,45 @@
+aside {
+    position: absolute;
+}
+.menu {
+    width: 10%;
+    background-color: #222;
+    height: 100vh;
+    position: fixed;
+}
+.menu img {
+    width: 50%;
+    margin: 25%;
+}
+.menu-item {
+    margin-top: 10%;
+}
+.menu ul li {
+
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+.menu hr {
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.menu a {
+    padding: 2rem;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: aliceblue;
+}
+.menu a:hover{
+    background-color: rgba(212, 212, 212, 0.9);
+    color: #121212;
+    text-decoration: none;
+}
+box-icon {
+    align-self: baseline;
+    justify-self:baseline;
+}
