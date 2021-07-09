@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
@@ -7,56 +8,102 @@
 
     <link rel="shortcut icon" href="/siteNoticias/images/icon1.ico" type="image/x-icon">
 
-    <link href="/siteNoticias/styles/menuLogin.css" rel="stylesheet">
+    <link href="/siteNoticias/styles/menuTest.css" rel="stylesheet">
     <link href="/siteNoticias/styles/normalize.css" rel="stylesheet">
+    <link href="/siteNoticias/styles/noticiasPages/noticiasPolitica.css" rel="stylesheet">
     <link href="/siteNoticias/styles/login.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans+SC">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
-    <script src="/siteNoticias/scripts/env.js"></script>
     <script src="/siteNoticias/scripts/loginRegister.js"></script>
-
+    <script src="/siteNoticias/scripts/env.js"></script>
+    <script src="/siteNoticias/scripts/app.js"></script>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        .menu {
+            font-family: 'Encode Sans SC';font-size: 18px;
         }
-        .menu img {
-            width: 13.4%;
-        }
-    </style>
+        </style>
 
 </head>
 <body>
 
-    <header class="header">
-        <nav class="menu">
-            <ul>
-                <li> <a><img class="iconMenu" src="/siteNoticias/images/icon1.png" alt="temp"></a> </li>
-                <li> <a class="homeIcon" href="/siteNoticias/index.html"> <img src="/siteNoticias/images/homeIcon.png" alt="homePageIcon"></a> </li>
-                
-            </ul>    
-        </nav>
-    
-    </header>
+    <aside>
+        <div class="menu">
+            <a class="icon-menu" href="/siteNoticias/index.html"><img src="/siteNoticias/images/icon1White.png"></a>
+            <div class="menu-item">
+                <ul class="nav">
+                    <li>
+                        <a href="/siteNoticias/htmls/educacao.html">
+                            <box-icon name='school' type='solid' color='#ffffff' ></box-icon>
+                            Educacao
+                        </a>
+                        
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="/siteNoticias/htmls/politica.html">
+                            <box-icon name='briefcase' color='#ffffff' ></box-icon>
+                            Politica
+                        </a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="/siteNoticias/htmls/saude.html">
+                            <box-icon name='health' color='#ffffff' ></box-icon>
+                            Saude
+                        </a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="/siteNoticias/htmls/login.html">
+                            <box-icon name='exit' color='#ffffff'></box-icon></box-icon>
+                            Login
+                        </a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a id="cotacoes">
+                            <box-icon name='exit' color='#ffffff'></box-icon></box-icon>
+                            Cotacoes
+                        </a>
+                    </li>
+                    <hr>
+                </ul>
+            </div>
+        </div>
+    </aside>
 
     <main class="conteudo">
         <section class="container">
-
+    
             <div class="login">
-                <h1>Log In</h1>
-                <br>
-
-                <input id="loginId" type="text"> <br>
-                <input id="loginPassword" type="password"> <br>
-                <button onclick="authenticateUser(event)"><strong>Login</strong></button>
-                <button onclick="registerPage()"><strong>Registar</strong></button>
-
+                <div class="login-box">
+                    <h1>Login</h1>
+                <div class="textbox">
+                    <i class="fas fa-user"></i>
+                    <input  id="loginId"  type="text" placeholder="Username">
+                </div>
+    
+                <div class="textbox">
+                    <i class="fas fa-lock"></i>
+                    <input id="loginPassword"  type="password" placeholder="Password">
+                </div>
+    
+                <input onclick="authenticateUser(event)" type="button" class="btn" value="Log in">
+                <input onclick="registerPage()" type="button" class="btn" value="Sign in">
             </div>
-
+    
+            </div>
+    
         </section>
     </main>
 </body>

@@ -1,54 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-
-    <title>Politica</title>
-
-
-    <link rel="shortcut icon" href="/siteNoticias/images/icon1.ico" type="image/x-icon">
-
-    <link href="/siteNoticias/styles/menu.css" rel="stylesheet">
-    <link href="/siteNoticias/styles/normalize.css" rel="stylesheet">
-    <link href="/siteNoticias/styles/noticiasPages/noticiasSaude.css" rel="stylesheet">
-
-    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
-    <script src="/siteNoticias/scripts/env.js"></script>
-    <script src="/siteNoticias/scripts/app.js"></script>
-
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        .menu img {
-            width: 13.6%;
-        }
-        .iconMenu {
-            margin-left: -100%;
-        }
-    </style>
-
-</head>
+    <head>
+        <meta charset="UTF-8">
+    
+        <title>Politica</title>
+    
+        <link rel="shortcut icon" href="/siteNoticias/images/icon1.ico" type="image/x-icon">
+    
+        <link href="/siteNoticias/styles/menuTest.css" rel="stylesheet">
+        <link href="/siteNoticias/styles/normalize.css" rel="stylesheet">
+        <link href="/siteNoticias/styles/noticiasPages/noticiasPolitica.css" rel="stylesheet">
+    
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+        <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans+SC">
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+    
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+        <script src="/siteNoticias/scripts/env.js"></script>
+        <script src="/siteNoticias/scripts/app.js"></script>
+    
+        <style>
+            .menu {
+                font-family: 'Encode Sans SC';font-size: 18px;
+            }
+            </style>
+    
+    </head>
 <body>
-
-<header class="header">
-    <nav class="menu">
-        <ul>          
-            <li> <a id="a0"><img id="icon" class="icon" src="/siteNoticias/images/icon1White.png" alt="temp"></a></li>
-            <li> <a id="a1" href="/siteNoticias/htmls/politica.html"><img id="img1" src="/siteNoticias/images/politicaIconWhite.png" alt="imgPolitica"></a></li>
-            <li> <a id="a2" href="/siteNoticias/htmls/saude.html"><img id="img2" src="/siteNoticias/images/saudeIconWhite.png" alt="imgSaude"></a></li>
-            <li> <a id="a3" href="/siteNoticias/htmls/educacao.html"><img id="img3" src="/siteNoticias/images/eduIconWhite.png" alt="imgEducacao"></a></li>
-            <li> <a id="a4" class="loginButton" href="/siteNoticias/htmls/login.html"><img id="img4" src="/siteNoticias/images/loginWhite.png" alt="imgEducacao"></a></li>
-        </ul>    
-    </nav>
-
-</header>
-
-
+    <aside>
+        <div class="menu">
+            <a class="icon-menu" href="/siteNoticias/index.html"><img src="/siteNoticias/images/icon1White.png"></a>
+            <div class="menu-item">
+                <ul class="nav">
+                    <li>
+                        <a href="/siteNoticias/htmls/educacao.html">
+                            <box-icon name='school' type='solid' color='#ffffff' ></box-icon>
+                            Educacao
+                        </a>
+                        
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="/siteNoticias/htmls/politica.html">
+                            <box-icon name='briefcase' color='#ffffff' ></box-icon>
+                            Politica
+                        </a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="/siteNoticias/htmls/saude.html">
+                            <box-icon name='health' color='#ffffff' ></box-icon>
+                            Saude
+                        </a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="/siteNoticias/htmls/login.html">
+                            <box-icon name='exit' color='#ffffff'></box-icon></box-icon>
+                            Login
+                        </a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a id="cotacoes">
+                            <box-icon name='exit' color='#ffffff'></box-icon></box-icon>
+                            Cotacoes
+                        </a>
+                    </li>
+                    <hr>
+                </ul>
+            </div>
+        </div>
+    </aside>
     
 <main class="conteudo">
 

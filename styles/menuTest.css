@@ -1,45 +1,203 @@
-aside {
-    position: absolute;
+@media only screen and (min-width: 1500px) { 
+    aside {
+        position: absolute;
+    }
+    .menu {
+        width: 10%;
+        background-color: #222;
+        height: 100vh;
+        position: fixed;
+    }
+    .menu img {
+        width: 50%;
+        margin: 25%;
+    }
+    .menu-item a{
+        margin-top: 10%;
+    }
+    .icon-menu {
+        text-decoration: none;
+    }
+    .menu ul li {
+        text-align: center;
+        justify-content: center;
+        vertical-align: middle;
+    }
+    .menu hr {
+        padding: 0;
+        margin: 0;
+        width: 50%;
+        margin-left: 25%;
+    }  
+    .menu a {
+        padding: 2rem;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        color: aliceblue;
+    }
+    .menu a:hover{
+        background-color: rgba(212, 212, 212, 0.9);
+        color: #121212;
+        text-decoration: none;
+    }
+    box-icon {
+        align-self: baseline;
+        justify-self:baseline;
+    }
+    #cotacoes {
+        display: none;
+    }
 }
-.menu {
-    width: 10%;
-    background-color: #222;
-    height: 100vh;
-    position: fixed;
-}
-.menu img {
-    width: 50%;
-    margin: 25%;
-}
-.menu-item {
-    margin-top: 10%;
-}
-.menu ul li {
 
-    text-align: center;
-    justify-content: center;
-    vertical-align: middle;
-}
-.menu hr {
-    padding: 0;
-    margin: 0;
-    width: 50%;
-    margin-left: 25%;
+
+@media only screen and (max-width: 1200px) { 
+    aside {
+        position: absolute;
+    }
+    .menu {
+        width: 10%;
+        background-color: #222;
+        height: 100vh;
+        position: fixed;
+    }
+    .menu img {
+        width: 50%;
+        margin: 25%;
+    }
+    .menu-item {
+        margin-top: 10%;
+    }
+    .menu ul li {
+        text-align: center;
+        justify-content: center;
+        vertical-align: middle;
+    }
+    .menu hr {
+        padding: 0;
+        margin: 0;
+        width: 50%;
+        margin-left: 25%;
+    }  
+    .menu a {
+        padding: 2rem;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        color: aliceblue;
+    }
+    .menu a:hover{
+        background-color: rgba(212, 212, 212, 0.9);
+        color: #121212;
+        text-decoration: none;
+    }
+    box-icon {
+        align-self: baseline;
+        justify-self:baseline;
+    }
+    #cotacoes {
+        display: block;
+    }
 }
 
-.menu a {
-    padding: 2rem;
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    color: aliceblue;
+@media only screen and (max-width: 1000px) {
+    aside {
+        position: absolute;
+    }
+    .menu {
+        width: 10%;
+        background-color: #222;
+        height: 100vh;
+        position: fixed;
+    }
+    .menu img {
+        width: 50%;
+        margin: 25%;
+    }
+    .menu-item {
+        margin-top: 10%;
+    }
+    .menu ul li {
+        text-align: center;
+        justify-content: center;
+        vertical-align: middle;
+    }
+    .menu hr {
+        padding: 0;
+        margin: 0;
+        width: 50%;
+        margin-left: 25%;
+    }  
+    .menu a {
+        padding: 2rem;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        color: aliceblue;
+    }
+    .menu a:hover{
+        background-color: rgba(212, 212, 212, 0.9);
+        color: #121212;
+        text-decoration: none;
+    }
+    box-icon {
+        align-self: baseline;
+        justify-self:baseline;
+    }
+    #cotacoes {
+        display: block;
+    }
 }
-.menu a:hover{
-    background-color: rgba(212, 212, 212, 0.9);
-    color: #121212;
-    text-decoration: none;
+
+@media only screen and (max-width: 767px){
+    aside {
+        position: absolute;
+    }
+    .menu {
+        width: 15%;
+        background-color: #222;
+        height: 100vh;
+        position: fixed;
+    }
+    .menu img {
+        width: 60%;
+        margin: 25%;
+    }
+    .menu-item {
+        margin-top: 10%;
+    }
+    .menu ul li {
+        text-align: center;
+        justify-content: center;
+        vertical-align: middle;
+    }
+    .menu hr {
+        padding: 0;
+        margin: 0;
+        width: 50%;
+        margin-left: 25%;
+    }  
+    .menu a {
+        padding: 2rem;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        color: aliceblue;
+    }
+    .menu a:hover{
+        background-color: rgba(212, 212, 212, 0.9);
+        color: #121212;
+        text-decoration: none;
+    }
+    box-icon {
+        align-self: baseline;
+        justify-self:baseline;
+    }
+    #cotacoes {
+        display: block;
+    }
 }
-box-icon {
-    align-self: baseline;
-    justify-self:baseline;
-}
+
+
+
+

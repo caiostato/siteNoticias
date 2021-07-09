@@ -5,33 +5,70 @@
     display: flex;
 }
 .container {
-    background: #1e90ff;
+    background: #222;
     width: 100%;
-    height: 50vh;
     margin-top: 17%;
     border-radius: 15px;
+    height: 50vh;
 
+    position: relative;
+    top: 30%;
+    left:10%;
+    
+}
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(bg.jpg) no-repeat;
+    background-size: cover;
+}
+.login-box{
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+.login-box h1{
+    float: left;
+    font-size: 40px;
+    border-bottom: 6px solid aliceblue;
+    margin-bottom: 50px;
+    padding: 13px 0;
+}
+.textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid aliceblue;
+}
+.textbox i{
+    width: 26px;
+    float: left;
     text-align: center;
-    
 }
-.login {
-    margin-top: 30%;
+.textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
 }
-.login input {
-
-    margin: 2% 0;
-    width: 50%;
-    padding: .5rem;
-
-
-}
-.login button {
-    width: 50%;
-    padding: .8rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 2% 0;
-    
-    border-radius: 10px;
-    background-color: lightslategrey;
-    border: 2px solid black;
+.btn{
+    width: 100%;
+    background: none;
+    border: 2px solid aliceblue;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 12px 0;
 }
