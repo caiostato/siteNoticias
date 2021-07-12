@@ -1,5 +1,4 @@
-
-function load(event) {
+function loadMain(event) {
     event.preventDefault();
 
     let titles = new Array();
@@ -7,7 +6,8 @@ function load(event) {
     let count = 0;
     let x = document.getElementsByClassName('noticiaPrincipal');
     
-    db.collection("noticias").get()
+    db.collection("noticias")
+        .where("type", "==", "politica").get()
     .then((querySnapshot) => {
         // Leituta noticias
         querySnapshot.forEach((doc) => {
@@ -34,6 +34,18 @@ function load(event) {
         console.log(error);
     })
 }
+
+$(document).ready(function(){
+    console.log("Biblioteca JQuery importada.");
+
+    let boxIcon = document.querySelector('box-icon'); //icon
+    $('box-icon').mouseenter(() => {
+        boxIcon.style.color = 'black'
+    })
+    $('box-icon').mouseleave(() => {
+        boxIcon.style.color = 'white'
+    })
+})
 
 // Curtir noticias 
 function like() {

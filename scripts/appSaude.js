@@ -6,7 +6,8 @@ function loadMain(event) {
     let count = 0;
     let x = document.getElementsByClassName('noticiaPrincipal');
     
-    db.collection("noticias").get()
+    db.collection("noticias")
+        .where("type", "==", "saude").get()
     .then((querySnapshot) => {
         // Leituta noticias
         querySnapshot.forEach((doc) => {
@@ -33,7 +34,6 @@ function loadMain(event) {
         console.log(error);
     })
 }
-
 
 $(document).ready(function(){
     console.log("Biblioteca JQuery importada.");

@@ -5,11 +5,10 @@
 
     <title>Caio & Fabio Noticias</title>
 
-    <link href="./styles/style.css" rel="stylesheet">
     <link href="./styles/menuTest.css" rel="stylesheet">
     <link href="./styles/api.css" rel="stylesheet">
     <link href="./styles/noticias.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans+SC">
 
@@ -19,9 +18,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
     
-    <script src="scripts/env.js"></script>
-    <script src="scripts/app.js"></script>
-    <script src="scripts/api.js"></script>
+    <script src="./scripts/env.js"></script>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/api.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Encode Sans SC' rel='stylesheet'>
     <style>
     .menu {
@@ -29,12 +28,12 @@
     }
     </style>
 </head>
-<body onload="load(event), apiEvent(event)">
+<body onload="loadMain(event), apiEvent(event)">
 
 <!--------------------Menu-------------------->
 <aside>
     <div class="menu">
-        <a class="icon-menu" href="/siteNoticias/index.html"><img src="/siteNoticias/images/icon1White.png"></a>
+        <a class="icon-menu" href="/siteNoticias/index.html"><img src="./images/icon1White.png"></a>
         <div class="menu-item">
             <ul class="nav">
                 <li>

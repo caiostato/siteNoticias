@@ -3,13 +3,13 @@
     <head>
         <meta charset="UTF-8">
     
-        <title>Politica</title>
+        <title>Saude</title>
     
-        <link rel="shortcut icon" href="/siteNoticias/images/icon1.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="../images/icon1.ico" type="image/x-icon">
     
-        <link href="/siteNoticias/styles/menuTest.css" rel="stylesheet">
-        <link href="/siteNoticias/styles/normalize.css" rel="stylesheet">
-        <link href="/siteNoticias/styles/noticiasPages/noticiasPolitica.css" rel="stylesheet">
+        <link href="../styles/menuTest.css" rel="stylesheet">
+        <link href="../styles/normalize.css" rel="stylesheet">
+        <link href="../styles/noticiasPages/noticiasPolitica.css" rel="stylesheet">
     
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
         <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
@@ -21,8 +21,8 @@
         <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
-        <script src="/siteNoticias/scripts/env.js"></script>
-        <script src="/siteNoticias/scripts/app.js"></script>
+        <script src="../scripts/env.js"></script>
+        <script src="../scripts/appPolitica.js"></script>
     
         <style>
             .menu {
@@ -31,97 +31,103 @@
             </style>
     
     </head>
-<body>
-    <aside>
-        <div class="menu">
-            <a class="icon-menu" href="/siteNoticias/index.html"><img src="/siteNoticias/images/icon1White.png"></a>
-            <div class="menu-item">
-                <ul class="nav">
-                    <li>
-                        <a href="/siteNoticias/htmls/educacao.html">
-                            <box-icon name='school' type='solid' color='#ffffff' ></box-icon>
-                            Educacao
-                        </a>
-                        
-                    </li>
-                    <hr>
-                    <li>
-                        <a href="/siteNoticias/htmls/politica.html">
-                            <box-icon name='briefcase' color='#ffffff' ></box-icon>
-                            Politica
-                        </a>
-                    </li>
-                    <hr>
-                    <li>
-                        <a href="/siteNoticias/htmls/saude.html">
-                            <box-icon name='health' color='#ffffff' ></box-icon>
-                            Saude
-                        </a>
-                    </li>
-                    <hr>
-                    <li>
-                        <a href="/siteNoticias/htmls/login.html">
-                            <box-icon name='exit' color='#ffffff'></box-icon></box-icon>
-                            Login
-                        </a>
-                    </li>
-                    <hr>
-                    <li>
-                        <a id="cotacoes">
-                            <box-icon name='exit' color='#ffffff'></box-icon></box-icon>
-                            Cotacoes
-                        </a>
-                    </li>
-                    <hr>
-                </ul>
+    <body onload="loadMain(event)">
+
+        <aside>
+            <div class="menu">
+                <a class="icon-menu" href="../index.html"><img src="../images/icon1White.png"></a>
+                <div class="menu-item">
+                    <ul class="nav">
+                        <li>
+                            <a href="../htmls/educacao.html">
+                                <box-icon name='school' type='solid' color='#ffffff' ></box-icon>
+                                Educacao
+                            </a>
+                            
+                        </li>
+                        <hr>
+                        <li>
+                            <a href="../htmls/politica.html">
+                                <box-icon name='briefcase' color='#ffffff' ></box-icon>
+                                Politica
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a href="../htmls/saude.html">
+                                <box-icon name='health' color='#ffffff' ></box-icon>
+                                Saude
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a href="../htmls/login.html">
+                                <box-icon name='exit' color='#ffffff'></box-icon></box-icon>
+                                Login
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a id="cotacoes">
+                                <box-icon name='exit' color='#ffffff'></box-icon></box-icon>
+                                Cotacoes
+                            </a>
+                        </li>
+                        <hr>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </aside>
+        </aside>
     
-<main class="conteudo">
-
-    <div class="container">
-        <section class="noticias">
-
-            <!-- ICON -->
-            <div class="Icon">
-                <ul>
-                    <li> <img src="/siteNoticias/images/politicaIcon.png" alt="temp"> </li>
-                    <li> <h1>Politica</h1> </li>
-                </ul>
-            </div>
-            
-            <!-- NOTICIAS -->
-
-            <a href="">
-                <div id="idNot1" class="noticiaPrincipal">
-                    <h2 id="idNotTitle1" class="noticiaPrincipal_titulo caixa">default</h2>
-                    <button onclick="like()"> <div class="heart"></div></button>                
+    <main class="conteudo">
+    
+        <div class="container">
+    
+            <section class="noticias">
+                <!-- ICON -->
+                <div class="Icon">
+                    <ul>
+                        <li> <img src="../images/politicaIcon.png" alt="temp"> </li>
+                        <li> <h1>Politica</h1> </li>
+                    </ul>
                 </div>
-            </a>
-
-
-            <a href="">
-                <div id="idNot2" class="noticiaPrincipal">   
-                    <h2 id="idNotTitle2" class="noticiaPrincipal_titulo caixa">default</h2>                   
-                    <button onclick="like()"> <div class="heart"></div></button>                    
-                </div>
-
-            </a>
-
-            <a href="">
-                <div id="idNot3" class="noticiaPrincipal">
-                    <h2 id="idNotTitle3" class="noticiaPrincipal_titulo caixa">default</h2>
+                
+                <!-- NOTICIAS -->
+                <div id="idNot0" class="noticiaPrincipal">
+    
+                    <h2 id="idNotTitle0" class="noticiaPrincipal_titulo caixa">default</h2>
+    
                     <button onclick="like()"> <div class="heart"></div></button>
+                    
                 </div>
-            </a>
-
-
-        
-        </section>
-    </div>
-
-</main>
     
-</body>
+                <div id="idNot1" class="noticiaPrincipal">
+    
+                    <h2 id="idNotTitle1" class="noticiaPrincipal_titulo caixa">default</h2>
+                    
+                    <button onclick="like()"> <div class="heart"></div></button>
+                    
+                </div>
+    
+                <div id="idNot2" class="noticiaPrincipal">
+    
+                    <h2 id="idNotTitle2" class="noticiaPrincipal_titulo caixa">default</h2>
+                    
+                    <button onclick="like()"> <div class="heart"></div></button>
+                    
+                </div>
+    
+                <div id="idNot3" class="noticiaPrincipal">
+    
+                    <h2 id="idNotTitle3" class="noticiaPrincipal_titulo caixa">default</h2>
+                    
+                    <button onclick="like()"> <div class="heart"></div></button>
+                    
+                </div>
+            </section>
+        </div>
+    
+    </main>
+        
+    </body>
 </html>
