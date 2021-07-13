@@ -48,9 +48,28 @@ $(document).ready(function(){
 })
 
 // Curtir noticias 
-function like() {
-    console.log("oi");
+function like(event) {
+    event.preventDefault();
+    let likes = 0
+    user = firebase.auth().currentUser
+
+	db.collection("like").add({
+		noticia:noticiaPrincipal_titulo caixa,
+		user:user.uid
+	})
+	.then(function(doRef){
+		console.log("like registrado");
+		deixar_like(event);
+	})
+	.catch(function(error){
+		console.log(error);
+	})		
+
+
+
 }
+    console.log("oi");
+
 
 // Randomizacao
 function getRandomInt(min, max) {
