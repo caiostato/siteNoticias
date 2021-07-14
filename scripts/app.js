@@ -34,6 +34,22 @@ function loadMain(event) {
     })
 }
 
+function loggoffBtn(event) {
+    event.preventDefault();
+
+    let like = document.getElementById('notLike');
+    let outBtn = document.getElementById('loggoff');
+    let inBtn = document.getElementById('login');
+    let user = localStorage.getItem('username');
+    
+    if(user != ''){
+        outBtn.setAttribute('style','display: block;');
+        inBtn.setAttribute('style','display: none;');    
+        like.setAttribute('style','display: block;'); 
+    }else {
+    }
+}
+
 
 $(document).ready(function(){
     console.log("Biblioteca JQuery importada.");
@@ -45,35 +61,52 @@ $(document).ready(function(){
     $('box-icon').mouseleave(() => {
         boxIcon.style.color = 'white'
     })
+
+    $('#loggoff').click(() => {
+        loggoff();
+    })
 })
 
 // Curtir noticias 
-function like(event) {
-    event.preventDefault();
-    let likes = 0
-    user = firebase.auth().currentUser
+function like(id) {
+    let user = localStorage.getItem('username');
 
-	db.collection("like").add({
-		noticia:noticiaPrincipal_titulo caixa,
-		user:user.uid
-	})
-	.then(function(doRef){
-		console.log("like registrado");
-		deixar_like(event);
-	})
-	.catch(function(error){
-		console.log(error);
-	})		
+    console.log(user);
 
-
-
+    if(user !== null){
+        let notTitle = document.getElementById(id).textContent;
+        
+        db.collection("like").add({
+            noticiaTitle:notTitle,
+            user:user
+        })
+        .then(function(doRef){
+            console.log("like registrado");
+        })
+        .catch(function(error){
+            console.log(error);
+        })		
+    }
+    else{
+        alert('Voce nao está logado!');
+    }
 }
-    console.log("oi");
-
-
 // Randomizacao
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function loggoff() {
+    localStorage.setItem('username','');
+
+    let outBtn = document.getElementById('loggoff');
+    let like = document.getElementById('notLike');
+    let inBtn = document.getElementById('login');
+
+    like.setAttribute('style','display: none;');
+    outBtn.setAttribute('style','display: none;');
+    inBtn.setAttribute('style','display: block;');
+    console.log(localStorage.getItem('username'))
 }

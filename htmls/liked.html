@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+        
+            <title>Noticias Curtidas</title>
+        
+            <link rel="shortcut icon" href="../images/icon1.ico" type="image/x-icon">
+        
+            <link href="../styles/menuTest.css" rel="stylesheet">
+            <link href="../styles/normalize.css" rel="stylesheet">
+            <link href="../styles/noticiasLiked.css" rel="stylesheet">
+        
+            <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+            <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans+SC">
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+        
+            <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+            <script src="../scripts/env.js"></script>
+            <script src="../scripts/Liked.js"></script>
+        
+            <style>
+                .menu {
+                    font-family: 'Encode Sans SC';font-size: 18px;
+                }
+                </style>
+        
+        </head>
+<body onload="loadMain(event)">
+
+<!--------------------Menu-------------------->
+<aside>
+    <div class="menu">
+        <a class="icon-menu" href="../index.html"><img src="../images/icon1White.png"></a>
+        <div class="menu-item">
+            <ul class="nav">
+                <li>
+                    <a href="../htmls/educacao.html">
+                        <box-icon name='school' type='solid' color='#ffffff' ></box-icon>
+                        Educacao
+                    </a>
+                    
+                </li>
+                <hr>
+                <li>
+                    <a href="../htmls/politica.html">
+                        <box-icon name='briefcase' color='#ffffff' ></box-icon>
+                        Politica
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="../htmls/saude.html">
+                        <box-icon name='health' color='#ffffff' ></box-icon>
+                        Saude
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="../htmls/contact.html">
+                        <box-icon name='contact' color='#ffffff' ></box-icon>
+                        Fale Conosco
+                    </a>
+                </li>
+                <hr>
+            </ul>
+        </div>
+    </div>
+</aside>
+
+
+<!--------------------Noticias-------------------->
+<main class="conteudo">
+    <div class="container">
+        <section class="noticias">
+            <div id="idNot0" class="noticiaPrincipal">
+
+                <h2 id="idNotTitle0" class="noticiaPrincipal_titulo caixa">default</h2>
+
+                <button onclick="like('idNotTitle0')"> <div class="heart"></div></button>
+                
+            </div>
+
+            <div id="idNot1" class="noticiaPrincipal">
+
+                <h2 id="idNotTitle1" class="noticiaPrincipal_titulo caixa">default</h2>
+                
+                <button onclick="like('idNotTitle1')"> <div class="heart"></div></button>
+                
+            </div>
+
+            <div id="idNot2" class="noticiaPrincipal">
+
+                <h2 id="idNotTitle2" class="noticiaPrincipal_titulo caixa">default</h2>
+                
+                <button onclick="like('idNotTitle2')"> <div class="heart"></div></button>
+                
+            </div>
+
+            <div id="idNot3" class="noticiaPrincipal">
+
+                <h2 id="idNotTitle3" class="noticiaPrincipal_titulo caixa">default</h2>
+                
+                <button onclick="like('idNotTitle3')"> <div class="heart"></div></button>
+                
+            </div>
+
+            <div id="idNot4" class="noticiaPrincipal">
+
+                <h2 id="idNotTitle4" class="noticiaPrincipal_titulo caixa">default</h2>
+                
+                <button onclick="like('idNotTitle4')"> <div class="heart"></div></button>
+                
+            </div>
+
+            <div id="idNot5" class="noticiaPrincipal">
+
+                <h2 id="idNotTitle5" class="noticiaPrincipal_titulo caixa">default</h2>
+                
+                <button onclick="like('idNotTitle5')"> <div class="heart"></div></button>
+                
+            </div>
+
+            <div class="pe">
+                Desenvolvido por Caio Stato & Fabio Furquim.
+            </div>
+        </section>
+    </div>
+
+</main>
+
+</body>
+</html>

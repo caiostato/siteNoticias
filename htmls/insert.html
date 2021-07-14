@@ -3,13 +3,14 @@
     <head>
         <meta charset="UTF-8">
     
-        <title>Saude</title>
+        <title>Fale Conosco</title>
     
         <link rel="shortcut icon" href="../images/icon1.ico" type="image/x-icon">
     
         <link href="../styles/menuTest.css" rel="stylesheet">
         <link href="../styles/normalize.css" rel="stylesheet">
-        <link href="../styles/noticiasPages/noticiasSaude.css" rel="stylesheet">
+        <link href="../styles/noticiasPages/noticiasPolitica.css" rel="stylesheet">
+        <link href="../styles/contact.css" rel="stylesheet">
     
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
         <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
@@ -21,8 +22,9 @@
         <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+        <script src="../scripts/insert.js"></script>
         <script src="../scripts/env.js"></script>
-        <script src="../scripts/appSaude.js"></script>
+        <script src="../scripts/app.js"></script>
     
         <style>
             .menu {
@@ -31,9 +33,7 @@
             </style>
     
     </head>
-</head>
-<body onload="loadMain(event)">
-
+<body>
     <aside>
         <div class="menu">
             <a class="icon-menu" href="../index.html"><img src="../images/icon1White.png"></a>
@@ -62,13 +62,6 @@
                     </li>
                     <hr>
                     <li>
-                        <a href="../htmls/contact.html">
-                            <box-icon name='contact' color='#ffffff' ></box-icon>
-                            Fale Conosco
-                        </a>
-                    </li>
-                    <hr>
-                    <li>
                         <a href="../htmls/login.html">
                             <box-icon name='exit' color='#ffffff'></box-icon></box-icon>
                             Login
@@ -87,60 +80,48 @@
         </div>
     </aside>
 
-<main class="conteudo">
-
-    <div class="container">
-
-        <section class="noticias">
-            <!-- ICON -->
-            <div class="Icon">
-                <ul>
-                    <li> <img src="../images/saudeIcon.png" alt="temp"> </li>
-                    <li> <h1>Saude</h1> </li>
-                </ul>
-            </div>
+    <main class="conteudo">
+        <section class="container">
+    
             
-            <!-- NOTICIAS -->
-            <div id="idNot0" class="noticiaPrincipal">
-
-                <h2 id="idNotTitle0" class="noticiaPrincipal_titulo caixa">default</h2>
-
-                <button onclick="like()"> <div class="heart"></div></button>
-                
-            </div>
-
-            <div id="idNot1" class="noticiaPrincipal">
-
-                <h2 id="idNotTitle1" class="noticiaPrincipal_titulo caixa">default</h2>
-                
-                <button onclick="like()"> <div class="heart"></div></button>
-                
-            </div>
-
-            <div id="idNot2" class="noticiaPrincipal">
-
-                <h2 id="idNotTitle2" class="noticiaPrincipal_titulo caixa">default</h2>
-                
-                <button onclick="like()"> <div class="heart"></div></button>
-                
-            </div>
-
-            <div id="idNot3" class="noticiaPrincipal">
-
-                <h2 id="idNotTitle3" class="noticiaPrincipal_titulo caixa">default</h2>
-                
-                <button onclick="like()"> <div class="heart"></div></button>
-                
-            </div>
-
             
+            <div class="login">
+                <div class="login-box">
+                    <h1>Inserir Noticia</h1>
+                <div class="textbox">
+                    <i class="fas fa-user"></i>
+                    <input  id="title"  type="text" placeholder="Titulo">
+                </div>
+
+                <div class="textbox">
+                    <i class="fas fa-lock"></i>
+                    <input id="url"  type="password" placeholder="URL da imagem">
+                </div>
+                    
+                <div class="textbox">
+                    <i class="fas fa-lock"></i>
+                    <input id="type"  type="text" placeholder="Tipo: none, educacao, saude, politica">
+                </div>
+    
+                <div class="textbox">
+                    <i class="fas fa-lock"></i>
+                    <input id="corp"  type="text" placeholder="Corpo da noticia">
+                </div>
+                
+    
+                <input onclick="insert(event)" type="button" class="btn" value="Enviar">
+            </div>
+    
+            
+    
             <div class="pe">
                 Desenvolvido por Caio Stato & Fabio Furquim.
             </div>
         </section>
-    </div>
+    </main>
 
-</main>
+
+
     
 </body>
 </html>

@@ -5,6 +5,8 @@
 
     <title>Caio & Fabio Noticias</title>
 
+    <link rel="shortcut icon" href="./images/icon1.ico" type="image/x-icon">
+
     <link href="./styles/menuTest.css" rel="stylesheet">
     <link href="./styles/api.css" rel="stylesheet">
     <link href="./styles/noticias.css" rel="stylesheet">
@@ -28,16 +30,16 @@
     }
     </style>
 </head>
-<body onload="loadMain(event), apiEvent(event)">
+<body onload="loadMain(event), apiEvent(event), loggoffBtn(event)">
 
 <!--------------------Menu-------------------->
 <aside>
     <div class="menu">
-        <a class="icon-menu" href="/siteNoticias/index.html"><img src="./images/icon1White.png"></a>
+        <a class="icon-menu" href="./index.html"><img src="./images/icon1White.png"></a>
         <div class="menu-item">
             <ul class="nav">
                 <li>
-                    <a href="/siteNoticias/htmls/educacao.html">
+                    <a href="./htmls/educacao.html">
                         <box-icon name='school' type='solid' color='#ffffff' ></box-icon>
                         Educacao
                     </a>
@@ -45,33 +47,54 @@
                 </li>
                 <hr>
                 <li>
-                    <a href="/siteNoticias/htmls/politica.html">
+                    <a href="./htmls/politica.html">
                         <box-icon name='briefcase' color='#ffffff' ></box-icon>
                         Politica
                     </a>
                 </li>
                 <hr>
                 <li>
-                    <a href="/siteNoticias/htmls/saude.html">
+                    <a href="./htmls/saude.html">
                         <box-icon name='health' color='#ffffff' ></box-icon>
                         Saude
                     </a>
                 </li>
                 <hr>
                 <li>
-                    <a href="/siteNoticias/htmls/login.html">
+                    <a href="./htmls/contact.html">
+                        <box-icon name='telegram' type='logo' color='#ffffff' ></box-icon>
+                        Fale Conosco
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="./htmls/insert.html">
+                        Inserir Noticia
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a id="notLike" href="./htmls/liked.html">
+                        Noticias Curtidas
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a id="login" href="./htmls/login.html">
                         <box-icon name='exit' color='#ffffff'></box-icon></box-icon>
                         Login
                     </a>
                 </li>
                 <hr>
                 <li>
-                    <a id="cotacoes">
+                    <a id="loggoff">
                         <box-icon name='exit' color='#ffffff'></box-icon></box-icon>
-                        Cotacoes
+                        Log off
                     </a>
                 </li>
                 <hr>
+            
+            
             </ul>
         </div>
     </div>
@@ -119,7 +142,7 @@
 
                 <h2 id="idNotTitle0" class="noticiaPrincipal_titulo caixa">default</h2>
 
-                <button onclick="like()"> <div class="heart"></div></button>
+                <button onclick="like('idNotTitle0')"> <div class="heart"></div></button>
                 
             </div>
 
@@ -127,7 +150,7 @@
 
                 <h2 id="idNotTitle1" class="noticiaPrincipal_titulo caixa">default</h2>
                 
-                <button onclick="like()"> <div class="heart"></div></button>
+                <button onclick="like('idNotTitle1')"> <div class="heart"></div></button>
                 
             </div>
 
@@ -135,7 +158,7 @@
 
                 <h2 id="idNotTitle2" class="noticiaPrincipal_titulo caixa">default</h2>
                 
-                <button onclick="like()"> <div class="heart"></div></button>
+                <button onclick="like('idNotTitle2')"> <div class="heart"></div></button>
                 
             </div>
 
@@ -143,7 +166,7 @@
 
                 <h2 id="idNotTitle3" class="noticiaPrincipal_titulo caixa">default</h2>
                 
-                <button onclick="like()"> <div class="heart"></div></button>
+                <button onclick="like('idNotTitle3')"> <div class="heart"></div></button>
                 
             </div>
 
@@ -151,7 +174,7 @@
 
                 <h2 id="idNotTitle4" class="noticiaPrincipal_titulo caixa">default</h2>
                 
-                <button onclick="like()"> <div class="heart"></div></button>
+                <button onclick="like('idNotTitle4')"> <div class="heart"></div></button>
                 
             </div>
 
@@ -159,13 +182,17 @@
 
                 <h2 id="idNotTitle5" class="noticiaPrincipal_titulo caixa">default</h2>
                 
-                <button onclick="like()"> <div class="heart"></div></button>
+                <button onclick="like('idNotTitle5')"> <div class="heart"></div></button>
                 
+            </div>
+
+            <div class="pe">
+                Desenvolvido por Caio Stato & Fabio Furquim.
             </div>
         </section>
     </div>
 
 </main>
-    
+
 </body>
 </html>

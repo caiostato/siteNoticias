@@ -108,3 +108,8 @@ button {
     left: 15px;
     top: 0;
 }
+pe{
+    padding:1rem ;
+    background-color: #222;
+    color: black;
+}

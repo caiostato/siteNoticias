@@ -6,8 +6,10 @@ function authenticateUser(event){
     .then(function(){
         console.log("Usuario logado com sucesso");
         user = firebase.auth().currentUser;
+        console.log(user.uid);
         
         localStorage.setItem('username',user.uid);
+        window.location.href="../index.html";
     })
     .catch(function(error){
         let errorCode = error.code;
@@ -20,7 +22,7 @@ function authenticateUser(event){
 }
 
 function registerPage() {
-    window.open("/siteNoticias/htmls/register.html");
+    window.open("../htmls/register.html");
 }
 
 function createUser(event){
